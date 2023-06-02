@@ -4,11 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+package com.example.unitconverterapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Objects;
 
 // android R.java file contains resource IDs for all the resources
 //we can use to access views from our java files
@@ -23,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.purple_700)));
 
         Button button = findViewById(R.id.button);
         textView = findViewById(R.id.textView);
@@ -31,11 +41,15 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Hi this got worked!", Toast.LENGTH_SHORT).show();
-                String s = editText.getText().toString();
-                int kg = Integer.parseInt(s);
-                double pound = 2.20462*kg;
-                textView.setText(pound +" Pounds");
+                try {
+                    String s = editText.getText().toString();
+                    int kg = Integer.parseInt(s);
+                    double pound = 2.20462*kg;
+                    textView.setText(pound +" Pounds");
+                    Toast.makeText(MainActivity.this, "Hi this got worked!", Toast.LENGTH_SHORT).show();
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this, "Please Enter Value!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
