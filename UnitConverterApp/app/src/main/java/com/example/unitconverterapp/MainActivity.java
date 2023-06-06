@@ -3,12 +3,6 @@ package com.example.unitconverterapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.os.Bundle;
-package com.example.unitconverterapp;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -48,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     textView.setText(pound +" Pounds");
                     Toast.makeText(MainActivity.this, "Hi this got worked!", Toast.LENGTH_SHORT).show();
                 }catch (Exception e){
+                    textView.setText("");
                     Toast.makeText(MainActivity.this, "Please Enter Value!", Toast.LENGTH_SHORT).show();
                 }
             }
