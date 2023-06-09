@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Table Generator</string>
+    <string name="MainActivityTextViewText">Enter Number</string>
+    <string name="MainActivityButtonText">Generate Table</string>
+    <string name="mainActivityEditTextText">here</string>
+    <string name="secondActivityName">Generating Table ....</string>
+</resources>
