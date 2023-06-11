@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ImageFetcherFromInternet" parent="Theme.AppCompat.DayNight.DarkActionBar">
+
+        <item name="titleTextColor">@color/black</item>
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/appBarColor</item>
+
+<!--        the down attribute is making editText view mire highlight-->
+        <item name="android:elevation" tools:ignore="NewApi">20dp</item>
+
+        <item name="colorPrimaryVariant">@color/statusBarColor</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.ImageFetcherFromInternet" parent="Base.Theme.ImageFetcherFromInternet" />
+</resources>

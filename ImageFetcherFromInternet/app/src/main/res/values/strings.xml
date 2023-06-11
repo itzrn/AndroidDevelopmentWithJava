@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Image Fetcher</string>
+    <string name="clear">Clear</string>
+    <string name="fetch">Fetch</string>
+    <string name="enterURL">ENTER URL</string>
+    <string name="imageViewActivityActionBarLabel">Image</string>
+</resources>
